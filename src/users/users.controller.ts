@@ -39,6 +39,7 @@ export class UsersController {
 
   @Post("signup")
   async signUp(@Body(new ValidationPipe({ whitelist: true })) signUpDto: SignUpDto) {
+    console.log('signup', signUpDto)
     return await this.usersService.signUp(signUpDto);
   }
 

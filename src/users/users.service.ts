@@ -27,7 +27,7 @@ export class UsersService {
     // Calculate the age based on the birthdate
     const today: Date = new Date();
     const birthDate: Date = new Date(birthdate);
-
+    
     let age: number = today.getFullYear() - birthDate.getFullYear();
     const monthDiff: number = today.getMonth() - birthDate.getMonth();
 
