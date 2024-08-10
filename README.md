@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Plena Task for building a user management microservice
 
 ## Installation
 
@@ -58,16 +58,13 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Docker
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+You can skip the process of setting up postgres in your system locally to kickstart this application by using docker and running the command below.
 
-## Stay in touch
+```bash
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+# Build and run containers in detached mode
+docker-compose up --build -d
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+```
