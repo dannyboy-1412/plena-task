@@ -63,8 +63,5 @@ $ npm run test:cov
 You can skip the process of setting up postgres in your system locally to kickstart this application by using docker and running the command below.
 
 ```bash
-
-# Build and run containers in detached mode
 docker-compose up --build -d
-
 ```
