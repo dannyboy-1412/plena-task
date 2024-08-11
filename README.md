@@ -65,3 +65,6 @@ You can skip the process of setting up postgres in your system locally to kickst
 ```bash
 docker-compose up --build -d
 ```
+
+## Remember
+ - Change the value of 'POSTGRES_HOST' in the .env file to localhost if you are running the app locally. While running using docker change it to db

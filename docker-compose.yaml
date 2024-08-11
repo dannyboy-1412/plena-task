@@ -6,20 +6,20 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgresql://postgres:dockerpassword@db:5432/plena
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:${POSTGRES_PORT}/${POSTGRES_DB}
 
   db:
     image: postgres:16
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: dockerpassword
-      POSTGRES_DB: plena
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     healthcheck:
       test: ["CMD-SHELL", "pg_isready"]
       interval: 1s
       timeout: 5s
-      retries: 10
+      retries: 5
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
